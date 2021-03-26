@@ -1,0 +1,210 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+}
+input {
+  outline: none;
+  display: block;
+}
+button {
+  cursor: pointer;
+}
+.container {
+  background: #e9eef0;
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "button form";
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 5rem;
+  /* background-color: tomato; */
+}
+.button {
+  grid-area: button;
+  outline: none;
+  border: none;
+  background: #3bcef4;
+  padding: 10px;
+  border-radius: 5px;
+  width: 200px;
+  text-align: start;
+  color: #eee;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.button:hover {
+  background: #2fa2bf;
+}
+.active {
+  background: #2fa2bf;
+}
+
+/* =========== Pagina Cadastro =========== */
+.container_form {
+  margin: 5rem 5rem 5rem 5rem;
+  padding: 10px 30px;
+  background: #fff;
+  border-radius: 5px;
+}
+.form {
+  /* background: tomato; */
+  border-radius: 5px;
+  max-height: 370px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "form1 form2";
+}
+
+.form1 {
+  grid-area: form1;
+  /* background: yellow; */
+  display: flex;
+  flex-direction: column;
+  color: #999;
+}
+
+.form2 {
+  grid-area: form2;
+  /* background: turquoise; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #999;
+}
+.form1 label input,
+.form2 label input {
+  margin-bottom: 10px;
+  border: 2px solid #d3d3d3;
+  width: 95%;
+  height: 30px;
+  padding-left: 5px;
+  color: #4f4f4f;
+  font-size: 15px;
+}
+
+#button_form {
+  position: absolute;
+  right: 5%;
+  bottom: -45px;
+  width: 40%;
+  background: #27ae60;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 10px 0px;
+  font-size: 15px;
+  font-weight: 700;
+}
+#city_uf {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 95%;
+}
+#input_uf {
+  width: 100%;
+}
+#input_cidade {
+  width: 190px;
+  margin-right: 40px;
+}
+#title_form {
+  text-align: center;
+  margin: 0.5rem;
+  text-transform: uppercase;
+  color: #3bcef4;
+  font-weight: bold;
+}
+
+/* =========== Pagina lista de Cadastrados =========== */
+.container_lista_cadastrados {
+  margin: 5rem 5rem 5rem 5rem;
+  padding: 10px 30px;
+  background: #fff;
+  border-radius: 5px;
+}
+.container_lista_cadastrados h1 {
+  color: #4f4f4f;
+  font-size: 20px;
+}
+.tabela {
+  font-size: 15px;
+  color: #4f4f4f;
+  /* background: tomato; */
+}
+.tabela thead tr {
+  /* background: yellow; */
+  white-space: normal;
+  border: none;
+  text-align: left;
+  padding-left: 8px;
+}
+.tabela tbody td {
+  width: 10%;
+  padding: 8px 8px 8px 0px;
+  color: #999;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  /* background: tomato; */
+}
+.buttons_table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.buttons_table button:first-child {
+  background: #27ae60;
+  border-radius: 5px;
+  width: 70%;
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 8px;
+  margin-bottom: 3px;
+}
+
+.buttons_table button:last-child {
+  background: #f35255;
+  border-radius: 5px;
+  width: 70%;
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 8px;
+}
+@media screen and (max-width: 980px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 850px) {
+  .container {
+    background: #fff;
+  }
+  .container_form {
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+  }
+  .container_lista_cadastrados {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 5px;
+  }
+}
